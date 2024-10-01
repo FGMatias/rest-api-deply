@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "curso node",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "node app.js",
+    "start:mysql": "node --watch server-with-mysql.js",
+    "start:local": "node --watch server-with-local.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,7 +17,8 @@
   "author": "Matias Fong",
   "license": "ISC",
   "devDependencies": {
-    "standard": "^17.1.2"
+    "@types/cors": "2.8.17",
+    "standard": "17.1.2"
   },
   "eslintConfig": {
     "extends": "standard"
@@ -23,6 +26,7 @@
   "dependencies": {
     "cors": "2.8.5",
     "express": "4.21.0",
+    "mysql2": "^3.11.3",
     "zod": "3.23.8"
   }
 }
